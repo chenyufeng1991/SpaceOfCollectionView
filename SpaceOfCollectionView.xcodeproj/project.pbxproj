@@ -12,6 +12,7 @@
 		712F305E1D16B134006D7EB0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712F305D1D16B134006D7EB0 /* MainViewController.m */; };
 		712F30631D16B134006D7EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712F30621D16B134006D7EB0 /* Assets.xcassets */; };
 		712F30661D16B134006D7EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F30641D16B134006D7EB0 /* LaunchScreen.storyboard */; };
+		CABDEEBFA1EA193B6C0BB95E /* libPods-SpaceOfCollectionView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3716A819F49804FA2920D9 /* libPods-SpaceOfCollectionView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		712F30621D16B134006D7EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		712F30651D16B134006D7EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		712F30671D16B134006D7EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B18DF5DE22474117BE38BD8 /* Pods-SpaceOfCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceOfCollectionView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		C51533CDCF296C255636BB05 /* Pods-SpaceOfCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceOfCollectionView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView.release.xcconfig"; sourceTree = "<group>"; };
+		EC3716A819F49804FA2920D9 /* libPods-SpaceOfCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceOfCollectionView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABDEEBFA1EA193B6C0BB95E /* libPods-SpaceOfCollectionView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13B2E59768B2A1B3436E94CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B18DF5DE22474117BE38BD8 /* Pods-SpaceOfCollectionView.debug.xcconfig */,
+				C51533CDCF296C255636BB05 /* Pods-SpaceOfCollectionView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		29A8286138C433B24D246E77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC3716A819F49804FA2920D9 /* libPods-SpaceOfCollectionView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		712F304A1D16B134006D7EB0 = {
 			isa = PBXGroup;
 			children = (
 				712F30551D16B134006D7EB0 /* SpaceOfCollectionView */,
 				712F30541D16B134006D7EB0 /* Products */,
+				13B2E59768B2A1B3436E94CE /* Pods */,
+				29A8286138C433B24D246E77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 712F306A1D16B134006D7EB0 /* Build configuration list for PBXNativeTarget "SpaceOfCollectionView" */;
 			buildPhases = (
+				B23B5993B9BE8E007C774B45 /* [CP] Check Pods Manifest.lock */,
 				712F304F1D16B134006D7EB0 /* Sources */,
 				712F30501D16B134006D7EB0 /* Frameworks */,
 				712F30511D16B134006D7EB0 /* Resources */,
+				16AF9A8491356001165E9060 /* [CP] Embed Pods Frameworks */,
+				19270EAD3329FFF70E5AE98F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16AF9A8491356001165E9060 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19270EAD3329FFF70E5AE98F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B23B5993B9BE8E007C774B45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		712F304F1D16B134006D7EB0 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		712F306B1D16B134006D7EB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B18DF5DE22474117BE38BD8 /* Pods-SpaceOfCollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SpaceOfCollectionView/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		712F306C1D16B134006D7EB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C51533CDCF296C255636BB05 /* Pods-SpaceOfCollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SpaceOfCollectionView/Info.plist;
@@ -288,6 +365,7 @@
 				712F306C1D16B134006D7EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
