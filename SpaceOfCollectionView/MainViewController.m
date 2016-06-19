@@ -30,7 +30,7 @@
 - (void)configUI
 {
     WeakSelf(weakSelf);
-    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"], nil];
+    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"],[UIImage imageNamed:@"beauty"], nil];
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -42,13 +42,11 @@
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-
         make.top.equalTo(weakSelf.view).offset(200);
         make.left.equalTo(weakSelf.view);
         make.right.equalTo(weakSelf.view);
         make.height.equalTo(@60);
     }];
-
 }
 
 #pragma mark - UiCollectionViewDataSource
