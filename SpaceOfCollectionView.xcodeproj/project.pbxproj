@@ -12,6 +12,7 @@
 		712F305E1D16B134006D7EB0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712F305D1D16B134006D7EB0 /* MainViewController.m */; };
 		712F30631D16B134006D7EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712F30621D16B134006D7EB0 /* Assets.xcassets */; };
 		712F30661D16B134006D7EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712F30641D16B134006D7EB0 /* LaunchScreen.storyboard */; };
+		712F30701D16B62B006D7EB0 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 712F306F1D16B62B006D7EB0 /* CustomCollectionViewCell.m */; };
 		CABDEEBFA1EA193B6C0BB95E /* libPods-SpaceOfCollectionView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3716A819F49804FA2920D9 /* libPods-SpaceOfCollectionView.a */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		712F30621D16B134006D7EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		712F30651D16B134006D7EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		712F30671D16B134006D7EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		712F306E1D16B62B006D7EB0 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		712F306F1D16B62B006D7EB0 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		7B18DF5DE22474117BE38BD8 /* Pods-SpaceOfCollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceOfCollectionView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView.debug.xcconfig"; sourceTree = "<group>"; };
 		C51533CDCF296C255636BB05 /* Pods-SpaceOfCollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceOfCollectionView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpaceOfCollectionView/Pods-SpaceOfCollectionView.release.xcconfig"; sourceTree = "<group>"; };
 		EC3716A819F49804FA2920D9 /* libPods-SpaceOfCollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceOfCollectionView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,7 @@
 		712F30551D16B134006D7EB0 /* SpaceOfCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				712F306D1D16B616006D7EB0 /* Cell */,
 				712F30591D16B134006D7EB0 /* AppDelegate.h */,
 				712F305A1D16B134006D7EB0 /* AppDelegate.m */,
 				712F305C1D16B134006D7EB0 /* MainViewController.h */,
@@ -98,6 +102,15 @@
 				712F30571D16B134006D7EB0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		712F306D1D16B616006D7EB0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				712F306E1D16B62B006D7EB0 /* CustomCollectionViewCell.h */,
+				712F306F1D16B62B006D7EB0 /* CustomCollectionViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +236,7 @@
 				712F305E1D16B134006D7EB0 /* MainViewController.m in Sources */,
 				712F305B1D16B134006D7EB0 /* AppDelegate.m in Sources */,
 				712F30581D16B134006D7EB0 /* main.m in Sources */,
+				712F30701D16B62B006D7EB0 /* CustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
