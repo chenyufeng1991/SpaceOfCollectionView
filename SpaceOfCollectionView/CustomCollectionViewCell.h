@@ -10,6 +10,9 @@
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 
+#define CELL_WIDTH01 (SCREEN_WIDTH - 80) / 3
+#define CELL_WIDTH02 70
+
 @interface CustomCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImageView *imageView;

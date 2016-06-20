@@ -17,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH - 80) / 3, (SCREEN_WIDTH - 80) / 3)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CELL_WIDTH02, CELL_WIDTH02)];
         [self addSubview:self.imageView];
     }
     return self;
