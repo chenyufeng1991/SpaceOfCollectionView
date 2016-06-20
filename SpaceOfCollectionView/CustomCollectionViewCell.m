@@ -19,6 +19,10 @@
     {
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CELL_WIDTH02, CELL_WIDTH02)];
         [self addSubview:self.imageView];
+        // 图片填充满整个cell
+        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
     }
     return self;
 }

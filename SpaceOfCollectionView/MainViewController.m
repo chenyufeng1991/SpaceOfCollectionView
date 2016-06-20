@@ -44,10 +44,17 @@
 
     // 初始化，设置宽高
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, CELL_WIDTH02 * 2) collectionViewLayout:flowLayout];
+    self.collectionView.bounces = NO;
     [self.collectionView registerClass:[CustomCollectionViewCell class] forCellWithReuseIdentifier:@"CollectionCell"];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(64);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@(CELL_WIDTH02 * 2));
+    }];
 }
 
 #pragma mark - UiCollectionViewDataSource
