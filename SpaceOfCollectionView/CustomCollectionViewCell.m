@@ -8,23 +8,21 @@
 
 #import "CustomCollectionViewCell.h"
 #import "Masonry.h"
-#import "AppDelegate.h"
+
 
 @implementation CustomCollectionViewCell
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
-    if (self) {
-        WeakSelf(weakSelf);
-        self.backgroundColor = [UIColor redColor];
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH - 80) / 3, (SCREEN_WIDTH - 80) / 3)];
         [self addSubview:self.imageView];
-        [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(weakSelf);
-        }];
     }
     return self;
 }
+
+
 
 @end

@@ -1,15 +1,17 @@
 //
 //  ViewController.m
-//  SpaceOfCollectionView
+//  ShowHiddenKeyboard
 //
-//  Created by chenyufeng on 6/19/16.
-//  Copyright © 2016 chenyufengweb. All rights reserved.
+//  Created by chenyufeng on 16/6/4.
+//  Copyright © 2016年 chenyufengweb. All rights reserved.
 //
 
 #import "MainViewController.h"
 #import "Masonry.h"
 #import "CustomCollectionViewCell.h"
 #import "AppDelegate.h"
+
+#define ARRAY_COUNT 5
 
 @interface MainViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -23,30 +25,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"CollectionView的间距设置";
+    self.title = @"主界面";
+
     [self configUI];
 }
 
 - (void)configUI
 {
-    WeakSelf(weakSelf);
-    self.collArr = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"beauty"],[UIImage imageNamed:@"beauty"], nil];
+    // CollectionView
+    self.collArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < ARRAY_COUNT; i++)
+    {
+        [self.collArr addObject:[UIImage imageNamed:@"beauty"]];
+    }
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, 70) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds] collectionViewLayout:flowLayout];
     [self.collectionView registerClass:[CustomCollectionViewCell class] forCellWithReuseIdentifier:@"CollectionCell"];
-    self.collectionView.backgroundColor = [UIColor yellowColor];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.view).offset(200);
-        make.left.equalTo(weakSelf.view);
-        make.right.equalTo(weakSelf.view);
-        make.height.equalTo(@60);
-    }];
 }
 
 #pragma mark - UiCollectionViewDataSource
@@ -58,25 +58,26 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
-    if (cell == nil)
-    {
-        cell = [[CustomCollectionViewCell alloc] init];
-    }
     cell.imageView.image = self.collArr[indexPath.row];
-    
+
     return cell;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(60, 60);
+    return CGSizeMake((SCREEN_WIDTH - 80) / 3, (SCREEN_WIDTH - 80) / 3);
 }
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 5, 0, 5);
-}
-
 
 @end
+
+
+
+
+
+
+
+
+
+
+
